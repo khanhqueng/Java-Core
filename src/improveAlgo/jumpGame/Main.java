@@ -14,8 +14,8 @@ public class Main {
                 count++;
                 break;
             }
-            if(i>=maxReach){
-                maxReach=i+nums[i];
+            if(i==maxReach){
+                maxReach=maxJump;
                 count++;
             }
 
