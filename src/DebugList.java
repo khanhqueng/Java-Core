@@ -24,5 +24,7 @@ public class DebugList {
         // create a singleton object which is immutable
         List<String> list4=  Collections.emptyList();
         list4.add("hi");
+
+
     }
 }
