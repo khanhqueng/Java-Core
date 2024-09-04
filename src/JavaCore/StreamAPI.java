@@ -1,23 +1,23 @@
-import java.util.Arrays;
+package JavaCore;
+
 import java.util.Comparator;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class StreamAPI {
     public static void main(String[] args) {
         objectStream();
+        primitiveStream();
     }
     public static void primitiveStream(){
 
         IntStream.of(1,4,3,54).forEach(System.out::println);
         int[] b= new int[]{1,4,6,7,3,8};
-        boolean n= IntStream.concat(IntStream.of(b), IntStream.of(5,6,7))
+        Integer n= IntStream.concat(IntStream.of(b), IntStream.of(5,6,8))
                 .filter(a-> a%2==0)
                 .limit(2)
-                .anyMatch(c-> c== 0);
+                .findFirst().orElse(0);
+//                .anyMatch(c-> c==8);
         System.out.println(n);
     }
     public static void objectStream(){

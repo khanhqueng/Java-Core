@@ -1,3 +1,5 @@
+package JavaCore;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -15,15 +17,18 @@ public class DebugList {
         list.get(0);
         List<String> list1= new LinkedList<>();
         list1.add("Hi");
+        list1.add("hello");
+        list1.add(1,"khanh");
         // have to traverse to that element
         list1.get(0);
+        System.out.println(list1);
         List<Integer> list3= List.of(1,2,3,45);
 //        list3.remove(2);
         // exception because list.of is immutable
         System.out.println(list3);
         // create a singleton object which is immutable
         List<String> list4=  Collections.emptyList();
-        list4.add("hi");
+//        list4.add("hi");
 
 
     }

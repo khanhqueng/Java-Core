@@ -1,3 +1,5 @@
+package JavaCore;
+
 import java.util.*;
 
 public class DebugSet {

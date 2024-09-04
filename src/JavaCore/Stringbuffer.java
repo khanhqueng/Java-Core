@@ -1,3 +1,5 @@
+package JavaCore;
+
 public class Stringbuffer {
     public static void main(String[] args) {
         // similar to builder but this support synchronization
@@ -11,6 +13,7 @@ public class Stringbuffer {
     public static void stringBuffer(){
         // mutable char sequence, improve performance when manipulate with String
     }
+    // nested no need outer class instance
     static class Test extends Thread{
         StringBuffer bf;
         public Test(){
