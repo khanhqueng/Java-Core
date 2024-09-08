@@ -1,5 +1,8 @@
 package JavaCore;
 
+import java.io.StringReader;
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -7,7 +10,8 @@ import java.util.stream.IntStream;
 public class StreamAPI {
     public static void main(String[] args) {
         objectStream();
-        primitiveStream();
+//        primitiveStream();
+        parallelStream();
     }
     public static void primitiveStream(){
 
@@ -31,5 +35,11 @@ public class StreamAPI {
 //                .orElseGet(()-> "hello");
 
         System.out.println(result);
+    }
+    public static void parallelStream(){
+            List<String> list= Arrays.asList("1","6","8", "34");
+            // should use parallel in aggregate function
+            String k= list.parallelStream().reduce("hello",(a, b)-> a+b);
+            System.out.println(k);
     }
 }
