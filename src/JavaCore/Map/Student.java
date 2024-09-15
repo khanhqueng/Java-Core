@@ -28,6 +28,6 @@ public class Student {
 
     @Override
     public int hashCode() {
-        return 1;
+        return Objects.hash(id,name);
     }
 }

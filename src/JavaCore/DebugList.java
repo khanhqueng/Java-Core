@@ -1,9 +1,6 @@
 package JavaCore;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class DebugList {
     public static void main(String[] args) {
@@ -15,6 +12,18 @@ public class DebugList {
         list.add("hello");
         // can access random with constant time
         list.get(0);
+        Iterator<String> iterator= list.iterator();
+        while(iterator.hasNext()){
+            if(iterator.next().equals("hello")){
+                iterator.remove();
+            }
+        }
+        System.out.println(list);
+        // cant add
+        for(String s: list){
+            list.add("hi");
+        }
+        System.out.println(list);
         List<String> list1= new LinkedList<>();
         list1.add("Hi");
         list1.add("hello");

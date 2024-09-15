@@ -19,6 +19,7 @@ public class DebugSet {
         for (int i: set2){
             System.out.println(i);
         }
+
         // learn all implementation of map
         Map<Integer,Integer> map= new HashMap<>();
         map.put(1,2);
