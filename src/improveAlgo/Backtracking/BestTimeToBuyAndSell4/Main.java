@@ -1,4 +1,4 @@
-package improveAlgo.BestTimeToBuyAndSell4;
+package improveAlgo.Backtracking.BestTimeToBuyAndSell4;
 
 public class Main {
     public static void main(String[] args) {
