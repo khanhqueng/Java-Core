@@ -18,11 +18,13 @@ public class MaximumDepth {
         }
     }
     public static int maxDepth(TreeNode root) {
-        Queue<TreeNode> queue= new LinkedList<>();
-        queue.add(root);
-        int[] x= {0};
-        bfs(queue,x[0]);
-        return x[0];
+        if(root==null){
+            return 0;
+        }
+        int leftDepth = maxDepth(root.left);
+        int rightDepth = maxDepth(root.right);
+
+        return 1+Math.max(leftDepth,rightDepth);
     }
     public static void bfs(Queue<TreeNode> queue, int count){
         count++;
