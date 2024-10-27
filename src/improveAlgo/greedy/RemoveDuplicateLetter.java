@@ -7,10 +7,11 @@ import java.util.Stack;
 
 public class RemoveDuplicateLetter {
     public static void main(String[] args){
-        System.out.println(removeDuplicateLetters("cbacdcbc"));
+        RemoveDuplicateLetter removeDuplicateLetter= new RemoveDuplicateLetter();
+        System.out.println(removeDuplicateLetter.removeDuplicateLetters("cbacdcbc"));
 
     }
-    public static String removeDuplicateLetters(String s) {
+    public String removeDuplicateLetters(String s) {
         Map<Character, Integer> map= new HashMap<>();
         Stack<Character> stack= new Stack<>();
         int[] isVisited= new int[26];
